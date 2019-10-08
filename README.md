@@ -1,1 +1,1 @@
-# webpack-typings-for-css
+# Webpack Typings for CSS loader

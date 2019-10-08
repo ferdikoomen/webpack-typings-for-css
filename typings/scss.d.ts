@@ -1,0 +1,27 @@
+/**
+ * In your project your are using CSS modules, so you can import styles
+ * using the following standard imports:
+ *
+ * <code>
+ * import styles from './styles.scss';
+ *
+ * console.log(styles.myClassName);
+ * </code>
+ *
+ * ...However, since we are using Typescript we want to have type definitions for
+ * the imported modules. For this we are using the 'webpack-typings-for-css' loader.
+ * This loader will generate the .d.ts definition files next to our stylesheets.
+ * However.. When we do a clean build we are missing these files, so we need
+ * to register a generic module so the Typescript compiler will not complain
+ * about any missing modules.
+ */
+declare module '*.scss' {
+
+    interface ClassNames {
+        readonly [className: string]: string;
+    }
+
+    declare const styles: ClassNames;
+
+    export default styles;
+}

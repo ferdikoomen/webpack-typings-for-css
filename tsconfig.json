@@ -1,0 +1,37 @@
+{
+    "compileOnSave": false,
+
+    "compilerOptions": {
+        "outDir": "./dist",
+        "target": "esnext",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "lib": ["esnext", "dom"],
+        "types": ["node"],
+        "typeRoots": ["node_modules/@types"],
+        "declaration": false,
+        "declarationMap": false,
+        "sourceMap": false,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "strictNullChecks": true
+    },
+
+    "files": [
+        "./typings/css.d.ts",
+        "./typings/less.d.ts",
+        "./typings/scss.d.ts"
+    ],
+
+    "include": [
+        "./test/index.ts"
+    ],
+
+    "exclude": [
+        "node_modules"
+    ]
+}
+
