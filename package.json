@@ -1,9 +1,16 @@
 {
     "name": "webpack-typings-for-css",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "",
     "author": "Ferdi Koomen",
     "homepage": "https://github.com/ferdikoomen/webpack-typings-for-css",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ferdikoomen/webpack-typings-for-css.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ferdikoomen/webpack-typings-for-css/issues"
+    },
     "license": "MIT",
     "maintainers": [
         {
@@ -23,15 +30,23 @@
     "scripts": {
         "clean": "rimraf ./test/dist ./test/*.d.ts",
         "build": "webpack",
-        "run": "webpack-dev-server"
+        "run": "webpack-dev-server",
+        "test": "webpack && jest",
+        "eslint": "eslint \"./src/**/*.js\"",
+        "eslint:fix": "eslint \"./src/**/*.js\" --fix",
+        "prettier": "prettier \"./src/**/*.js\" --check",
+        "prettier:fix": "prettier \"./src/**/*.js\" --write"
     },
     "dependencies": {
         "camelcase": "5.3.1",
         "path": "0.12.7"
     },
     "devDependencies": {
-        "@types/node": "12.7.11",
+        "@types/node": "12.11.1",
         "css-loader": "3.2.0",
+        "eslint": "6.5.1",
+        "eslint-config-prettier": "6.4.0",
+        "eslint-plugin-prettier": "3.1.1",
         "file-loader": "4.2.0",
         "html-webpack-plugin": "3.2.0",
         "jest": "24.9.0",
@@ -39,12 +54,13 @@
         "less": "3.10.3",
         "less-loader": "5.0.0",
         "node-sass": "4.12.0",
+        "prettier": "1.18.2",
         "rimraf": "3.0.0",
         "sass-loader": "8.0.0",
         "style-loader": "1.0.0",
         "ts-loader": "6.2.0",
-        "typescript": "3.6.3",
-        "webpack": "4.41.0",
+        "typescript": "3.6.4",
+        "webpack": "4.41.2",
         "webpack-cli": "3.3.9",
         "webpack-dev-server": "3.8.2"
     }

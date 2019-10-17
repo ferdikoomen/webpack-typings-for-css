@@ -9,6 +9,8 @@ module.exports = {
 
     entry: path.resolve(__dirname, './test/index.ts'),
 
+    devtool: false,
+
     output: {
         path: path.resolve(__dirname, './test/dist'),
         filename: 'bundle.js'
