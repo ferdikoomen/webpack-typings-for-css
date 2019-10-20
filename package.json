@@ -18,6 +18,16 @@
             "email": "info@madebyferdi.com"
         }
     ],
+    "keywords": [
+        "webpack",
+        "loader",
+        "typescript",
+        "typings",
+        "generate",
+        "scss",
+        "less",
+        "css"
+    ],
     "main": "src/index.js",
     "module": "src/index.js",
     "files": [
