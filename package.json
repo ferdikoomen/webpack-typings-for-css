@@ -1,6 +1,6 @@
 {
     "name": "webpack-typings-for-css",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Webpack loader that generates TypeScript typings for CSS modules",
     "author": "Ferdi Koomen",
     "homepage": "https://github.com/ferdikoomen/webpack-typings-for-css",
