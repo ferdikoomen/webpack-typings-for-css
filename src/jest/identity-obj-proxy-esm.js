@@ -14,7 +14,7 @@ const proxy = new Proxy(
             }
             return key;
         },
-    }
+    },
 );
 
 module.exports = proxy;
