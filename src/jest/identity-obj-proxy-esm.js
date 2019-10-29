@@ -4,7 +4,6 @@
 // import * as styles from './styles.scss'.
 // import styles from './styles.scss'.
 // https://github.com/keyanzhang/identity-obj-proxy/issues/8
-
 const proxy = new Proxy(
     {},
     {
@@ -14,7 +13,7 @@ const proxy = new Proxy(
             }
             return key;
         },
-    },
+    }
 );
 
 module.exports = proxy;
