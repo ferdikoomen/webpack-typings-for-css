@@ -3,7 +3,6 @@
 [![NPM](https://badgen.net/npm/v/webpack-typings-for-css)](https://www.npmjs.com/package/webpack-typings-for-css)
 [![License](https://badgen.net/npm/license/webpack-typings-for-css)](https://www.npmjs.com/package/webpack-typings-for-css)
 [![Dependencies](https://badgen.net/david/dep/ferdikoomen/webpack-typings-for-css)](https://david-dm.org/ferdikoomen/webpack-typings-for-css)
-[![Build Size](https://badgen.net/bundlephobia/minzip/webpack-typings-for-css)](https://bundlephobia.com/result?p=webpack-typings-for-css)
 [![Build Status](https://badgen.net/travis/ferdikoomen/webpack-typings-for-css/master)](https://travis-ci.org/ferdikoomen/webpack-typings-for-css)
 [![Quality](https://badgen.net/lgtm/grade/javascript/g/ferdikoomen/webpack-typings-for-css)](https://lgtm.com/projects/g/ferdikoomen/webpack-typings-for-css)
 
