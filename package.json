@@ -52,7 +52,7 @@
         "path": "0.12.7"
     },
     "devDependencies": {
-        "@types/node": "12.12.18",
+        "@types/node": "12.12.20",
         "css-loader": "3.3.2",
         "eslint": "6.7.2",
         "eslint-config-prettier": "6.7.0",
