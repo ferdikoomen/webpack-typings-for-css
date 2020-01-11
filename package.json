@@ -38,14 +38,16 @@
         "typings/scss.d.ts"
     ],
     "scripts": {
-        "clean": "rimraf ./test/dist ./test/*.d.ts",
+        "clean": "rimraf ./test/dist ./test/*.d.ts ./coverage",
         "build": "webpack",
         "run": "webpack-dev-server",
-        "test": "jest --coverage",
+        "test": "jest",
+        "test:coverage": "jest --coverage",
         "eslint": "eslint \"./src/**/*.js\"",
         "eslint:fix": "eslint \"./src/**/*.js\" --fix",
         "prettier": "prettier \"./src/**/*.js\" --check",
-        "prettier:fix": "prettier \"./src/**/*.js\" --write"
+        "prettier:fix": "prettier \"./src/**/*.js\" --write",
+        "codecov": "codecov --token=a1a1f1e5-572a-40fc-bf19-16eca1fe8016"
     },
     "dependencies": {
         "camelcase": "5.3.1",
@@ -53,6 +55,7 @@
     },
     "devDependencies": {
         "@types/node": "13.1.6",
+        "codecov": "3.6.1",
         "css-loader": "3.4.1",
         "eslint": "6.8.0",
         "eslint-config-prettier": "6.9.0",
