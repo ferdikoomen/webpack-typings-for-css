@@ -41,7 +41,7 @@
         "clean": "rimraf ./test/dist ./test/*.d.ts",
         "build": "webpack",
         "run": "webpack-dev-server",
-        "test": "webpack && jest",
+        "test": "jest --coverage",
         "eslint": "eslint \"./src/**/*.js\"",
         "eslint:fix": "eslint \"./src/**/*.js\" --fix",
         "prettier": "prettier \"./src/**/*.js\" --check",

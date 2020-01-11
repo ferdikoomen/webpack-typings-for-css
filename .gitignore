@@ -10,3 +10,4 @@ junit.xml
 *.iml
 test/dist/*
 test/*.d.ts
+coverage
