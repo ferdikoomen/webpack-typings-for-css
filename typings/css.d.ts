@@ -17,11 +17,11 @@
  */
 declare module '*.css' {
 
-    interface ClassNames {
-        readonly [className: string]: string;
-    }
+    declare const styles: {
+        readonly [key: string]: string;
+    };
 
-    declare const styles: ClassNames;
+    export type ClassName = string;
 
     export default styles;
 }

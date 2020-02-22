@@ -67,12 +67,18 @@ When we add the `webpack-typings-for-css` loader, this will generate a TypeScrip
 definition file `./src/button/style.scss.d.ts` with the following content:
 
 ```typescript
-interface ClassNames {
-    readonly button: string;
-    readonly buttonSmall: string;
-    readonly buttonLarge: string;
-}
-declare const styles: ClassNames;
+declare const styles = {
+    button: 'styles__button__2wmORyJZRJFrl_Mc46Dxnh',
+    buttonSmall: 'styles__button--small__1dezcn7Xl7U8em93APXPIU',
+    buttonLarge: 'styles__button--large__2GA-bPwea6oWSnVWqjy_ux',
+} as const;
+
+export type ClassName = (
+    'styles__button__2wmORyJZRJFrl_Mc46Dxnh' |
+    'styles__button--small__1dezcn7Xl7U8em93APXPIU' |
+    'styles__button--large__2GA-bPwea6oWSnVWqjy_ux'
+);
+
 export default styles;
 ```
 
@@ -92,7 +98,7 @@ In your (React) button component you can now use the same import and use these r
 type checked classNames to style your components!
 
 ```typescript jsx
-import * as React from 'react';
+import React from 'react';
 
 import styles from './styles.scss';
 
@@ -128,11 +134,11 @@ to your project:
 ```typescript
 declare module '*.scss' {
 
-    interface ClassNames {
-        readonly [className: string]: string;
-    }
+    declare const styles: {
+        readonly [key: string]: string;
+    };
 
-    declare const styles: ClassNames;
+    export type ClassName = string;
 
     export default styles;
 }

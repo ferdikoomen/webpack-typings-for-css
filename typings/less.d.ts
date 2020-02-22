@@ -11,17 +11,17 @@
  * ...However, since we are using Typescript we want to have type definitions for
  * the imported modules. For this we are using the 'webpack-typings-for-css' loader.
  * This loader will generate the .d.ts definition files next to our stylesheets.
- * However.. When we do a clean build we are missing these files, so we need
- * to register a generic module so the Typescript compiler will not complain
- * about any missing modules.
+ * However, when we do a clean build we are missing these files, so we need to
+ * register a generic module so the Typescript compiler will not complain about
+ * any missing modules.
  */
 declare module '*.less' {
 
-    interface ClassNames {
-        readonly [className: string]: string;
-    }
+    declare const styles: {
+        readonly [key: string]: string;
+    };
 
-    declare const styles: ClassNames;
+    export type ClassName = string;
 
     export default styles;
 }

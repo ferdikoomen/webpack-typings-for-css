@@ -39,7 +39,10 @@ module.exports = {
                 use: [{
                     loader: 'style-loader'
                 }, {
-                    loader: path.resolve(__dirname, './src')
+                    loader: path.resolve(__dirname, './src'),
+                    options: {
+                        exportType: true
+                    }
                 }, {
                     loader: 'css-loader',
                     options: {

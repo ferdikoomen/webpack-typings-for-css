@@ -1,6 +1,10 @@
-import scssExample from './styles.scss';
+import scssExample, { ClassName } from './styles.scss';
 import lessExample from './styles.less';
 import cssExample from './styles.css';
+
+function testClassName(className: ClassName): void {
+    console.log('className:', className)
+}
 
 console.log(scssExample.button);
 console.log(scssExample.buttonSmall);
@@ -16,5 +20,10 @@ console.log(cssExample.button);
 console.log(cssExample.buttonSmall);
 console.log(cssExample.buttonLarge);
 console.log(cssExample.buttonWithCamelCaseName);
+
+testClassName(scssExample.button);
+testClassName(scssExample.buttonSmall);
+testClassName(scssExample.buttonLarge);
+testClassName(scssExample.buttonWithCamelCaseName);
 
 console.log('Done!');
