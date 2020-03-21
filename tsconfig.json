@@ -3,10 +3,10 @@
 
     "compilerOptions": {
         "outDir": "./dist",
-        "target": "esnext",
-        "module": "esnext",
+        "target": "es6",
+        "module": "es6",
         "moduleResolution": "node",
-        "lib": ["esnext", "dom"],
+        "lib": ["es6", "dom"],
         "types": ["node"],
         "typeRoots": ["node_modules/@types"],
         "declaration": false,
