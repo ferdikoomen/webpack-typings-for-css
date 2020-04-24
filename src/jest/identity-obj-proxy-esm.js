@@ -7,7 +7,7 @@
 const proxy = new Proxy(
     {},
     {
-        get: function(target, key) {
+        get: function (target, key) {
             if (key === '__esModule' || key === 'default') {
                 return proxy;
             }
