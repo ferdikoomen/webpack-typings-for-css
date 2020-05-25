@@ -59,7 +59,7 @@
     },
     "devDependencies": {
         "@types/node": "14.0.1",
-        "codecov": "3.6.5",
+        "codecov": "3.7.0",
         "css-loader": "3.5.3",
         "eslint": "7.0.0",
         "eslint-config-prettier": "6.11.0",
