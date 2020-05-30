@@ -1,26 +1,6 @@
 'use strict';
 
-const fs = require('fs');
-const path = require('path');
-const camelCase = require('camelcase');
-const handlebars = require('handlebars');
-
-/**
- * Read and compile the handlebar template
- * @param name Name of the template
- */
-function readTemplate(name) {
-    const templatePath = path.resolve(__dirname, name);
-    const templateContent = fs.readFileSync(templatePath, 'utf8').toString();
-    return handlebars.compile(templateContent, {
-        strict: true,
-        noEscape: true,
-        knownHelpersOnly: true,
-        knownHelpers: {
-            object: true,
-        },
-    });
-}
+import camelCase from 'camelcase';
 
 /**
  * Convert prop name to "camelCase" and support special cases
@@ -40,7 +20,7 @@ function toPropName(key) {
  * use "camelCase" variable names in our code. So, we convert the keys
  * to this format!
  */
-function getExports(locals) {
+export function getExports(locals) {
     const exports = {};
     Object.entries(locals).forEach(([key, value]) => {
         exports[toPropName(key)] = value;
@@ -53,12 +33,6 @@ function getExports(locals) {
  * @param source Original input source
  * @param exports Modified local exports
  */
-function getSource(source, exports) {
+export function getSource(source, exports) {
     return source.replace(/exports\.locals = \{[\S\s]*\};/gm, `exports.locals = ${JSON.stringify(exports)};`);
 }
-
-module.exports = {
-    readTemplate,
-    getExports,
-    getSource,
-};

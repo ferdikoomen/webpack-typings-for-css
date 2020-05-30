@@ -39,7 +39,7 @@ module.exports = {
                 use: [{
                     loader: 'style-loader'
                 }, {
-                    loader: path.resolve(__dirname, './src'),
+                    loader: path.resolve(__dirname, './dist'),
                     options: {
                         exportType: true
                     }
@@ -60,7 +60,7 @@ module.exports = {
                 use: [{
                     loader: 'style-loader'
                 }, {
-                    loader: path.resolve(__dirname, './src')
+                    loader: path.resolve(__dirname, './dist')
                 }, {
                     loader: 'css-loader',
                     options: {
@@ -78,7 +78,7 @@ module.exports = {
                 use: [{
                     loader: 'style-loader'
                 }, {
-                    loader: path.resolve(__dirname, './src')
+                    loader: path.resolve(__dirname, './dist')
                 }, {
                     loader: 'css-loader',
                     options: {

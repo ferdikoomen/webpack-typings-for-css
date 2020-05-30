@@ -8,6 +8,8 @@ junit.xml
 .idea
 .vscode
 *.iml
+dist
+archive
 test/dist/*
 test/*.d.ts
 coverage

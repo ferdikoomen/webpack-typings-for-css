@@ -1,12 +1,13 @@
 'use strict';
 
-const fs = require('fs');
-const path = require('path');
-const { getOptions } = require('loader-utils');
-const utils = require('./utils');
+import * as fs from 'fs';
+import * as path from 'path';
+import { getOptions } from 'loader-utils';
+import { getExports, getSource } from './utils';
+import Handlebars from 'handlebars/runtime';
+import $export from './templates/export.hbs';
 
-// Read and compile the template (only once, since we can reuse it for each loader)
-const template = utils.readTemplate('template.hbs');
+const template = Handlebars.template($export);
 
 /**
  * The 'webpack-typings-for-css' loader writes out Typescript definition files for
@@ -40,7 +41,7 @@ function loader(source) {
         const localsString = String(match[1]);
         const locals = JSON.parse(localsString);
         const exportType = options && options.exportType === true;
-        const exports = utils.getExports(locals);
+        const exports = getExports(locals);
 
         // Get the path for the definition file, this is relative to the currently loaded scss file... easy!
         const extension = path.extname(this.resourcePath);
@@ -56,7 +57,7 @@ function loader(source) {
         fs.writeFileSync(definitionFile, definitionFileContent);
 
         // Return the modified source value.
-        return utils.getSource(source, exports);
+        return getSource(source, exports);
     }
     return source;
 }
