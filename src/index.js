@@ -24,7 +24,7 @@ function loader(source) {
 
     // The output of the CSS loader will contains the exported CSS identifiers:
     //
-    // exports.locals = {
+    // ___CSS_LOADER_EXPORT___.locals = {
     //     'my-button': '.styles__my-button__3uJig8mNpKSTG82THjk4l2',
     //     'my-table': '.styles__my-table__3uJig8mNpKSTG82THjk4l2',
     //     ...
@@ -32,7 +32,7 @@ function loader(source) {
     //
     // We need to grab these identifier, since we are interested in the keys,
     // these keys should be written out into a Typescript definition file.
-    const match = /exports\.locals = (\{[\S\s]*\});/gm.exec(source);
+    const match = /___CSS_LOADER_EXPORT___\.locals = (\{[\S\s]*\});/gm.exec(source);
 
     // If we have a match then we grab the content of the export,
     // this should be parsable as JSON, from there we can process it.

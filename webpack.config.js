@@ -46,8 +46,8 @@ module.exports = {
                 }, {
                     loader: 'css-loader',
                     options: {
-                        localsConvention: 'camelCaseOnly',
                         modules: {
+                            exportLocalsConvention: 'camelCaseOnly',
                             localIdentName: '[name]__[local]__[hash:base64]'
                         }
                     }
@@ -64,8 +64,8 @@ module.exports = {
                 }, {
                     loader: 'css-loader',
                     options: {
-                        localsConvention: 'camelCaseOnly',
                         modules: {
+                            exportLocalsConvention: 'camelCaseOnly',
                             localIdentName: '[name]__[local]__[hash:base64]'
                         }
                     }
@@ -82,8 +82,8 @@ module.exports = {
                 }, {
                     loader: 'css-loader',
                     options: {
-                        localsConvention: 'camelCaseOnly',
                         modules: {
+                            exportLocalsConvention: 'camelCaseOnly',
                             localIdentName: '[name]__[local]__[hash:base64]'
                         }
                     }
