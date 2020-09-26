@@ -3,7 +3,7 @@ import lessExample from './styles.less';
 import cssExample from './styles.css';
 
 function testClassName(className: ClassName): void {
-    console.log('className:', className)
+    console.log('className:', className);
 }
 
 console.log(scssExample.button);

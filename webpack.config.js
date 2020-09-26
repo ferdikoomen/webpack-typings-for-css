@@ -13,17 +13,17 @@ module.exports = {
 
     output: {
         path: path.resolve(__dirname, './test/dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
     },
 
     resolve: {
-        extensions: ['.ts', '.js', '.scss', '.less', '.css']
+        extensions: ['.ts', '.js', '.scss', '.less', '.css'],
     },
 
     devServer: {
         contentBase: path.resolve(__dirname, './test/dist'),
         open: true,
-        port: 8080
+        port: 8080,
     },
 
     module: {
@@ -31,71 +31,71 @@ module.exports = {
             {
                 test: /\.ts$/,
                 use: [{
-                    loader: 'ts-loader'
-                }]
+                    loader: 'ts-loader',
+                }],
             },
             {
                 test: /\.scss$/,
                 use: [{
-                    loader: 'style-loader'
+                    loader: 'style-loader',
                 }, {
                     loader: path.resolve(__dirname, './dist'),
                     options: {
-                        exportType: true
-                    }
+                        exportType: true,
+                    },
                 }, {
                     loader: 'css-loader',
                     options: {
                         modules: {
                             exportLocalsConvention: 'camelCaseOnly',
-                            localIdentName: '[name]__[local]__[hash:base64]'
-                        }
-                    }
+                            localIdentName: '[name]__[local]__[hash:base64]',
+                        },
+                    },
                 }, {
-                    loader: 'sass-loader'
-                }]
+                    loader: 'sass-loader',
+                }],
             },
             {
                 test: /\.less$/,
                 use: [{
-                    loader: 'style-loader'
+                    loader: 'style-loader',
                 }, {
-                    loader: path.resolve(__dirname, './dist')
+                    loader: path.resolve(__dirname, './dist'),
                 }, {
                     loader: 'css-loader',
                     options: {
                         modules: {
                             exportLocalsConvention: 'camelCaseOnly',
-                            localIdentName: '[name]__[local]__[hash:base64]'
-                        }
-                    }
+                            localIdentName: '[name]__[local]__[hash:base64]',
+                        },
+                    },
                 }, {
-                    loader: 'less-loader'
-                }]
+                    loader: 'less-loader',
+                }],
             },
             {
                 test: /\.css$/,
                 use: [{
-                    loader: 'style-loader'
+                    loader: 'style-loader',
                 }, {
-                    loader: path.resolve(__dirname, './dist')
+                    loader: path.resolve(__dirname, './dist'),
                 }, {
                     loader: 'css-loader',
                     options: {
                         modules: {
                             exportLocalsConvention: 'camelCaseOnly',
-                            localIdentName: '[name]__[local]__[hash:base64]'
-                        }
-                    }
-                }]
-            }
-        ]
+                            localIdentName: '[name]__[local]__[hash:base64]',
+                        },
+                    },
+                }],
+            },
+        ],
     },
 
     plugins: [
         new HtmlWebpackPlugin({
             template: './test/index.html',
-            filename: './index.html'
-        })
-    ]
+            filename: './index.html',
+        }),
+    ],
 };

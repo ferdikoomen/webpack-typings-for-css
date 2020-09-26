@@ -6,6 +6,5 @@ module.exports = {
     },
     collectCoverageFrom: [
         'dist/*.js',
-        '!**/node_modules/**',
-    ]
+    ],
 };
