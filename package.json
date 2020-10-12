@@ -51,7 +51,7 @@
         "prepublish": "rollup --config"
     },
     "dependencies": {
-        "camelcase": "6.0.0",
+        "camelcase": "6.1.0",
         "handlebars": "4.7.6",
         "loader-utils": "2.0.0",
         "path": "0.12.7"
