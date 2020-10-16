@@ -159,8 +159,8 @@ declare module '*.scss' {
 
 [npm-url]: https://npmjs.org/package/webpack-typings-for-css
 [npm-image]: https://img.shields.io/npm/v/webpack-typings-for-css.svg
-[license-image]: http://img.shields.io/npm/l/webpack-typings-for-css.svg
 [license-url]: LICENSE
+[license-image]: http://img.shields.io/npm/l/webpack-typings-for-css.svg
 [travis-url]: https://travis-ci.org/ferdikoomen/webpack-typings-for-css
 [travis-image]: https://img.shields.io/travis/ferdikoomen/webpack-typings-for-css.svg
 [deps-url]: https://david-dm.org/ferdikoomen/webpack-typings-for-css
@@ -169,5 +169,5 @@ declare module '*.scss' {
 [quality-image]: https://img.shields.io/lgtm/grade/javascript/g/ferdikoomen/webpack-typings-for-css.svg
 [climate-url]: https://codeclimate.com/github/ferdikoomen/webpack-typings-for-css
 [climate-image]: https://img.shields.io/codeclimate/maintainability/ferdikoomen/webpack-typings-for-css.svg
+[downloads-url]: http://npm-stat.com/charts.html?package=webpack-typings-for-css
 [downloads-image]: http://img.shields.io/npm/dm/webpack-typings-for-css.svg
-[downloads-url]: http://npm-stat.com/charts.html?package=webpack-typings-for-css.svg
