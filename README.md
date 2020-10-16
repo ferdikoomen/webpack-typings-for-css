@@ -1,10 +1,12 @@
 # Webpack Typings for CSS loader
 
-[![NPM](https://badgen.net/npm/v/webpack-typings-for-css)](https://www.npmjs.com/package/webpack-typings-for-css)
-[![License](https://badgen.net/npm/license/webpack-typings-for-css)](https://www.npmjs.com/package/webpack-typings-for-css)
-[![Build Status](https://badgen.net/travis/ferdikoomen/webpack-typings-for-css/master)](https://travis-ci.org/ferdikoomen/webpack-typings-for-css)
-[![Codecov](https://codecov.io/gh/ferdikoomen/webpack-typings-for-css/branch/master/graph/badge.svg)](https://codecov.io/gh/ferdikoomen/webpack-typings-for-css)
-[![Quality](https://badgen.net/lgtm/grade/javascript/g/ferdikoomen/webpack-typings-for-css)](https://lgtm.com/projects/g/ferdikoomen/webpack-typings-for-css)
+[![NPM][npm-image]][npm-url]
+[![License][license-image]][license-url]
+[![Build Status][travis-image]][travis-url]
+[![Dependency Status][deps-image]][deps-url]
+[![Quality][quality-image]][quality-url]
+[![Code Climate][climate-image]][climate-url]
+[![Downloads][downloads-image]][downloads-url]
 
 > Webpack loader that generates TypeScript typings for CSS modules
 
@@ -154,3 +156,18 @@ declare module '*.scss' {
     ...
 }
 ```
+
+[npm-url]: https://npmjs.org/package/webpack-typings-for-css
+[npm-image]: https://img.shields.io/npm/v/webpack-typings-for-css.svg
+[license-image]: http://img.shields.io/npm/l/webpack-typings-for-css.svg
+[license-url]: LICENSE
+[travis-url]: https://travis-ci.org/ferdikoomen/webpack-typings-for-css
+[travis-image]: https://img.shields.io/travis/ferdikoomen/webpack-typings-for-css.svg
+[deps-url]: https://david-dm.org/ferdikoomen/webpack-typings-for-css
+[deps-image]: https://img.shields.io/david/ferdikoomen/webpack-typings-for-css.svg
+[quality-url]: https://lgtm.com/projects/g/ferdikoomen/webpack-typings-for-css
+[quality-image]: https://img.shields.io/lgtm/grade/javascript/g/ferdikoomen/webpack-typings-for-css.svg
+[climate-url]: https://codeclimate.com/github/ferdikoomen/webpack-typings-for-css
+[climate-image]: https://img.shields.io/codeclimate/maintainability/ferdikoomen/webpack-typings-for-css.svg
+[downloads-image]: http://img.shields.io/npm/dm/webpack-typings-for-css.svg
+[downloads-url]: http://npm-stat.com/charts.html?package=webpack-typings-for-css.svg
