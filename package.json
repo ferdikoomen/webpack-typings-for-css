@@ -1,6 +1,6 @@
 {
     "name": "webpack-typings-for-css",
-    "version": "0.6.1",
+    "version": "0.6.2",
     "description": "Webpack loader that generates TypeScript typings for CSS modules",
     "author": "Ferdi Koomen",
     "homepage": "https://github.com/ferdikoomen/webpack-typings-for-css",
@@ -48,7 +48,7 @@
         "prettier": "prettier \"./src/**/*.js\" --check",
         "prettier:fix": "prettier \"./src/**/*.js\" --write",
         "codecov": "codecov --token=a1a1f1e5-572a-40fc-bf19-16eca1fe8016",
-        "prepublish": "rollup --config"
+        "prepublish": "yarn clean && yarn build"
     },
     "dependencies": {
         "camelcase": "6.2.0",
@@ -59,7 +59,7 @@
     "devDependencies": {
         "@rollup/plugin-commonjs": "16.0.0",
         "@rollup/plugin-node-resolve": "10.0.0",
-        "@types/node": "14.14.7",
+        "@types/node": "14.14.8",
         "codecov": "3.8.1",
         "css-loader": "5.0.1",
         "eslint": "7.13.0",
@@ -74,13 +74,13 @@
         "node-sass": "5.0.0",
         "prettier": "2.1.2",
         "rimraf": "3.0.2",
-        "rollup": "2.33.2",
+        "rollup": "2.33.3",
         "rollup-plugin-terser": "7.0.2",
         "sass-loader": "10.1.0",
         "style-loader": "2.0.0",
         "ts-loader": "8.0.11",
         "typescript": "4.0.5",
-        "webpack": "5.4.0",
+        "webpack": "5.5.1",
         "webpack-cli": "4.2.0",
         "webpack-dev-server": "3.11.0"
     }
