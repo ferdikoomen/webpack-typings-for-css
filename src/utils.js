@@ -10,7 +10,7 @@ import camelCase from 'camelcase';
  */
 function toPropName(key) {
     if (/^[a-z][a-z0-9\-_]+/gi.test(key)) {
-        return camelCase(key);
+        return camelCase(key, { loale: 'en-US' });
     }
     return `'${key}'`;
 }
