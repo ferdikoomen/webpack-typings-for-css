@@ -72,7 +72,7 @@
         "less": "4.1.1",
         "less-loader": "8.1.1",
         "node-sass": "6.0.0",
-        "prettier": "2.2.1",
+        "prettier": "2.3.0",
         "rimraf": "3.0.2",
         "rollup": "2.46.0",
         "rollup-plugin-terser": "7.0.2",
