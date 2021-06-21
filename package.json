@@ -70,7 +70,7 @@
         "jest": "27.0.4",
         "jest-cli": "27.0.4",
         "less": "4.1.1",
-        "less-loader": "9.1.0",
+        "less-loader": "10.0.0",
         "node-sass": "6.0.0",
         "prettier": "2.3.1",
         "rimraf": "3.0.2",
