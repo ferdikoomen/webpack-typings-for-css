@@ -74,7 +74,7 @@
         "node-sass": "6.0.0",
         "prettier": "2.3.1",
         "rimraf": "3.0.2",
-        "rollup": "2.51.2",
+        "rollup": "2.52.1",
         "rollup-plugin-terser": "7.0.2",
         "sass-loader": "12.1.0",
         "style-loader": "2.0.0",
