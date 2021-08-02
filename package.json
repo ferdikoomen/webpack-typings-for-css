@@ -57,7 +57,7 @@
         "path": "^0.12.7"
     },
     "devDependencies": {
-        "@rollup/plugin-commonjs": "19.0.1",
+        "@rollup/plugin-commonjs": "20.0.0",
         "@rollup/plugin-node-resolve": "13.0.4",
         "@types/node": "16.4.3",
         "codecov": "3.8.3",
