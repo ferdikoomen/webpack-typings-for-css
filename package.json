@@ -59,7 +59,7 @@
     "devDependencies": {
         "@rollup/plugin-commonjs": "20.0.0",
         "@rollup/plugin-node-resolve": "13.0.4",
-        "@types/node": "16.4.3",
+        "@types/node": "16.4.10",
         "codecov": "3.8.3",
         "css-loader": "5.2.6",
         "eslint": "7.32.0",
