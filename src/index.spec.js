@@ -44,50 +44,17 @@ test('is generated correctly', done => {
         expect(cssStats.size).toBeGreaterThan(0);
 
         expect(scssContent).toContain('declare const styles = {');
-        expect(scssContent).toContain("button: 'styles__button__16qQ3lAe3ISxt3EdS7H8go'");
-        expect(scssContent).toContain("buttonSmall: 'styles__button--small__3Mq0Io0Rf03UwahBwABe4L'");
-        expect(scssContent).toContain("buttonLarge: 'styles__button--large__3bizO4nrDH_UJqz60AUbxe'");
-        expect(scssContent).toContain(
-            "buttonWithCamelCaseName: 'styles__buttonWithCamelCaseName__1DzACMqrtMVOsflVqK15Yk'"
-        );
-        expect(scssContent).toContain('export type ClassName');
-        expect(scssContent).toContain("'styles__button__16qQ3lAe3ISxt3EdS7H8go' |");
-        expect(scssContent).toContain("'styles__button--small__3Mq0Io0Rf03UwahBwABe4L' |");
-        expect(scssContent).toContain("'styles__button--large__3bizO4nrDH_UJqz60AUbxe' |");
+        expect(scssContent).toContain("'button': 'styles__button__GISsh92gQxfa7OCQ1UBr'");
 
         expect(lessContent).toContain('declare const styles = {');
-        expect(lessContent).toContain("button: 'styles__button__2tRZ10wzOJn1TSZ26v9AQy'");
-        expect(lessContent).toContain("buttonSmall: 'styles__button--small__3NwBmslscBVh4iESNeP3Bv'");
-        expect(lessContent).toContain("buttonLarge: 'styles__button--large__34gkTXrQ2It8RKP0Y9GB6N'");
-        expect(lessContent).toContain(
-            "buttonWithCamelCaseName: 'styles__buttonWithCamelCaseName__2oz5M6GprAaZnxLw8wzD5z'"
-        );
-        expect(cssContent).toContain('declare const styles = {');
-        expect(cssContent).toContain("button: 'styles__button__2VaeAG_8llAE34lZeT8dsE'");
-        expect(cssContent).toContain("buttonSmall: 'styles__button--small__1--z5UAWAd6fHIt__9Q-Cm'");
-        expect(cssContent).toContain("buttonLarge: 'styles__button--large__2Ns7M4Wyi5f2ewSbDOt0l4'");
-        expect(cssContent).toContain(
-            "buttonWithCamelCaseName: 'styles__buttonWithCamelCaseName__2zU_D6vvbwCcjtgHFHR3Bk'"
-        );
+        expect(lessContent).toContain("'button': 'styles__button__Ik0mnyH09h1crTyCQNDX'");
 
-        expect(bundleContent).toContain('"button": "styles__button__2tRZ10wzOJn1TSZ26v9AQy"');
-        expect(bundleContent).toContain('"buttonSmall": "styles__button--small__3NwBmslscBVh4iESNeP3Bv"');
-        expect(bundleContent).toContain('"buttonLarge": "styles__button--large__34gkTXrQ2It8RKP0Y9GB6N"');
-        expect(bundleContent).toContain(
-            '"buttonWithCamelCaseName": "styles__buttonWithCamelCaseName__2oz5M6GprAaZnxLw8wzD5z"'
-        );
-        expect(bundleContent).toContain('"button": "styles__button__2VaeAG_8llAE34lZeT8dsE"');
-        expect(bundleContent).toContain('"buttonSmall": "styles__button--small__1--z5UAWAd6fHIt__9Q-Cm"');
-        expect(bundleContent).toContain('"buttonLarge": "styles__button--large__2Ns7M4Wyi5f2ewSbDOt0l4"');
-        expect(bundleContent).toContain(
-            '"buttonWithCamelCaseName": "styles__buttonWithCamelCaseName__2zU_D6vvbwCcjtgHFHR3Bk"'
-        );
-        expect(bundleContent).toContain('"button": "styles__button__16qQ3lAe3ISxt3EdS7H8go"');
-        expect(bundleContent).toContain('"buttonSmall": "styles__button--small__3Mq0Io0Rf03UwahBwABe4L"');
-        expect(bundleContent).toContain('"buttonLarge": "styles__button--large__3bizO4nrDH_UJqz60AUbxe"');
-        expect(bundleContent).toContain(
-            '"buttonWithCamelCaseName": "styles__buttonWithCamelCaseName__1DzACMqrtMVOsflVqK15Yk'
-        );
+        expect(cssContent).toContain('declare const styles = {');
+        expect(cssContent).toContain("'button': 'styles__button__KNcgt9NXxICSVYX8Kuko'");
+
+        expect(bundleContent).toContain('"button": "styles__button__GISsh92gQxfa7OCQ1UBr"');
+        expect(bundleContent).toContain('"button": "styles__button__Ik0mnyH09h1crTyCQNDX"');
+        expect(bundleContent).toContain('"button": "styles__button__KNcgt9NXxICSVYX8Kuko"');
 
         done();
     });

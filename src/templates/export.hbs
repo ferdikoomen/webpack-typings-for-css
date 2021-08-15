@@ -4,7 +4,7 @@
 
 declare const styles = {
 {{#each exports}}
-    {{@key}}: '{{this}}',
+    '{{@key}}': '{{this}}',
 {{/each}}
 } as const;
 
