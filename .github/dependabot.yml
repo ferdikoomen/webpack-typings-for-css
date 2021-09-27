@@ -6,10 +6,4 @@ updates:
     interval: weekly
     time: "04:00"
   open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: less-loader
-    versions:
-    - 8.1.0
-  - dependency-name: rollup
-    versions:
-    - 2.42.1
+  
