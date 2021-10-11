@@ -2,11 +2,10 @@
 
 [![NPM][npm-image]][npm-url]
 [![License][license-image]][license-url]
-[![Build Status][travis-image]][travis-url]
-[![Dependency Status][deps-image]][deps-url]
 [![Quality][quality-image]][quality-url]
 [![Code Climate][climate-image]][climate-url]
 [![Downloads][downloads-image]][downloads-url]
+[![Build][build-image]][build-url]
 
 > Webpack loader that generates TypeScript typings for CSS modules
 
@@ -161,13 +160,11 @@ declare module '*.scss' {
 [npm-image]: https://img.shields.io/npm/v/webpack-typings-for-css.svg
 [license-url]: LICENSE
 [license-image]: http://img.shields.io/npm/l/webpack-typings-for-css.svg
-[travis-url]: https://travis-ci.org/ferdikoomen/webpack-typings-for-css
-[travis-image]: https://img.shields.io/travis/ferdikoomen/webpack-typings-for-css.svg
-[deps-url]: https://david-dm.org/ferdikoomen/webpack-typings-for-css
-[deps-image]: https://img.shields.io/david/ferdikoomen/webpack-typings-for-css.svg
 [quality-url]: https://lgtm.com/projects/g/ferdikoomen/webpack-typings-for-css
 [quality-image]: https://img.shields.io/lgtm/grade/javascript/g/ferdikoomen/webpack-typings-for-css.svg
 [climate-url]: https://codeclimate.com/github/ferdikoomen/webpack-typings-for-css
 [climate-image]: https://img.shields.io/codeclimate/maintainability/ferdikoomen/webpack-typings-for-css.svg
 [downloads-url]: http://npm-stat.com/charts.html?package=webpack-typings-for-css
 [downloads-image]: http://img.shields.io/npm/dm/webpack-typings-for-css.svg
+[build-url]: https://circleci.com/gh/ferdikoomen/webpack-typings-for-css/tree/master
+[build-image]: https://circleci.com/gh/ferdikoomen/webpack-typings-for-css/tree/master.svg?style=svg
