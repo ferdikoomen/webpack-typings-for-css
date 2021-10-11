@@ -13,6 +13,8 @@ test('is generated correctly', done => {
             return done(stats.toString());
         }
 
+        console.log('oke');
+
         const bundlePath = path.resolve(process.cwd(), './test/dist/bundle.js');
         const scssPath = path.resolve(process.cwd(), './test/styles.scss.d.ts');
         const lessPath = path.resolve(process.cwd(), './test/styles.less.d.ts');
@@ -44,17 +46,17 @@ test('is generated correctly', done => {
         expect(cssStats.size).toBeGreaterThan(0);
 
         expect(scssContent).toContain('declare const styles = {');
-        expect(scssContent).toContain("'button': 'styles__button__GISsh92gQxfa7OCQ1UBr'");
+        expect(scssContent).toContain("'button': 'styles__button__Hw0Uqn1lOzgGBl_9PVjw'");
 
         expect(lessContent).toContain('declare const styles = {');
-        expect(lessContent).toContain("'button': 'styles__button__Ik0mnyH09h1crTyCQNDX'");
+        expect(lessContent).toContain("'button': 'styles__button__HdpZ09TQC2DxcK3bYi4K'");
 
         expect(cssContent).toContain('declare const styles = {');
-        expect(cssContent).toContain("'button': 'styles__button__KNcgt9NXxICSVYX8Kuko'");
+        expect(cssContent).toContain("'button': 'styles__button__eU07H8hhIAVmp4dJuPwH'");
 
-        expect(bundleContent).toContain('"button": "styles__button__GISsh92gQxfa7OCQ1UBr"');
-        expect(bundleContent).toContain('"button": "styles__button__Ik0mnyH09h1crTyCQNDX"');
-        expect(bundleContent).toContain('"button": "styles__button__KNcgt9NXxICSVYX8Kuko"');
+        expect(bundleContent).toContain('"button": "styles__button__Hw0Uqn1lOzgGBl_9PVjw"');
+        expect(bundleContent).toContain('"button": "styles__button__HdpZ09TQC2DxcK3bYi4K"');
+        expect(bundleContent).toContain('"button": "styles__button__eU07H8hhIAVmp4dJuPwH"');
 
         done();
     });
