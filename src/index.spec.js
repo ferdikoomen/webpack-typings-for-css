@@ -60,4 +60,4 @@ test('is generated correctly', done => {
 
         done();
     });
-});
+}, 10000);
