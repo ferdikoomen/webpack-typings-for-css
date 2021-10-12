@@ -13,8 +13,6 @@ test('is generated correctly', done => {
             return done(stats.toString());
         }
 
-        console.log('oke');
-
         const bundlePath = path.resolve(process.cwd(), './test/dist/bundle.js');
         const scssPath = path.resolve(process.cwd(), './test/styles.scss.d.ts');
         const lessPath = path.resolve(process.cwd(), './test/styles.less.d.ts');
