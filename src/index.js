@@ -2,7 +2,6 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { getOptions } from 'loader-utils';
 import { getExports, getSource } from './utils';
 import Handlebars from 'handlebars/runtime';
 import $export from './templates/export.hbs';
@@ -37,7 +36,7 @@ function loader(source) {
     // If we have a match then we grab the content of the export,
     // this should be parsable as JSON, from there we can process it.
     if (match && match.length) {
-        const options = getOptions(this);
+        const options = this.getOptions();
         const localsString = String(match[1]);
         const locals = JSON.parse(localsString);
         const exportType = options && options.exportType === true;
