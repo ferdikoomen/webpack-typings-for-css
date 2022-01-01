@@ -57,7 +57,7 @@
     },
     "devDependencies": {
         "@rollup/plugin-commonjs": "21.0.1",
-        "@rollup/plugin-node-resolve": "13.0.6",
+        "@rollup/plugin-node-resolve": "13.1.2",
         "@types/node": "16.11.11",
         "codecov": "3.8.3",
         "css-loader": "6.5.1",
