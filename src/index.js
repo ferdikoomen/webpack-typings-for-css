@@ -1,7 +1,7 @@
 'use strict';
 
-import * as fs from 'fs';
-import * as path from 'path';
+import { writeFileSync } from 'fs';
+import { extname } from 'path';
 import { getExports, getSource } from './utils';
 import Handlebars from 'handlebars/runtime';
 import $export from './templates/export.hbs';
@@ -43,7 +43,7 @@ function loader(source) {
         const exports = getExports(locals);
 
         // Get the path for the definition file, this is relative to the currently loaded scss file... easy!
-        const extension = path.extname(this.resourcePath);
+        const extension = extname(this.resourcePath);
         const definitionFile = this.resourcePath.replace(`${extension}`, `${extension}.d.ts`);
         const definitionFileContent = template({
             exports,
@@ -53,7 +53,7 @@ function loader(source) {
         // Write the definition file, we do not use Webpack's emitFile() method, since
         // that would then track this output file as a dependency. We don't want this,
         // since these files are placed inside the source folder!
-        fs.writeFileSync(definitionFile, definitionFileContent);
+        writeFileSync(definitionFile, definitionFileContent);
 
         // Return the modified source value.
         return getSource(source, exports);

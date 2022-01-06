@@ -1,43 +1,37 @@
-'use strict';
-
-const commonjs = require('@rollup/plugin-commonjs');
-const { nodeResolve } = require('@rollup/plugin-node-resolve');
-const { terser } = require('rollup-plugin-terser');
-const handlebars = require('handlebars');
-const path = require('path');
-const fs = require('fs');
-
-const pkg = require('./package.json');
-const external = Object.keys(pkg.dependencies);
+import commonjs from '@rollup/plugin-commonjs';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import { readFileSync } from 'fs';
+import { precompile } from 'handlebars';
+import { dirname, resolve } from 'path';
+import externals from 'rollup-plugin-node-externals';
+import { terser } from 'rollup-plugin-terser';
 
 /**
  * Custom plugin to parse handlebar imports and precompile
  * the template on the fly. This reduces runtime by about
  * half on large projects.
  */
-function handlebarsPlugin() {
-    return {
-        resolveId(file, importer) {
-            if (file.endsWith('.hbs')) {
-                return path.resolve(path.dirname(importer), file);
-            }
-            return null;
-        },
-        load(file) {
-            if (file.endsWith('.hbs')) {
-                const template = fs.readFileSync(file, 'utf8').toString().trim();
-                const templateSpec = handlebars.precompile(template, {
-                    strict: true,
-                    noEscape: true,
-                    knownHelpersOnly: true,
-                    knownHelpers: {},
-                });
-                return `export default ${templateSpec};`;
-            }
-            return null;
-        },
-    };
-}
+const handlebarsPlugin = () => ({
+    resolveId(file, importer) {
+        if (file.endsWith('.hbs')) {
+            return resolve(dirname(importer), file);
+        }
+        return null;
+    },
+    load(file) {
+        if (file.endsWith('.hbs')) {
+            const template = readFileSync(file, 'utf8').toString().trim();
+            const templateSpec = precompile(template, {
+                strict: true,
+                noEscape: true,
+                knownHelpersOnly: true,
+                knownHelpers: {},
+            });
+            return `export default ${templateSpec};`;
+        }
+        return null;
+    },
+});
 
 export default {
     input: './src/index.js',
@@ -45,11 +39,15 @@ export default {
         file: './dist/index.js',
         format: 'cjs',
     },
-    external: ['fs', 'os', 'util', 'handlebars/runtime', ...external],
     plugins: [
-        handlebarsPlugin(),
+        externals({
+            deps: true,
+        }),
         nodeResolve(),
-        commonjs(),
+        commonjs({
+            sourceMap: false,
+        }),
+        handlebarsPlugin(),
         terser({
             output: {
                 comments: false,

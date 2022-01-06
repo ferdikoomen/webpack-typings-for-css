@@ -4,7 +4,5 @@ module.exports = {
     moduleNameMapper: {
         '\\.hbs$': '<rootDir>/src/templates/__mocks__/index.js',
     },
-    collectCoverageFrom: [
-        'dist/*.js',
-    ],
+    collectCoverageFrom: ['dist/*.js'],
 };

@@ -4,7 +4,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-
     mode: 'development',
 
     entry: path.resolve(__dirname, './test/index.ts'),
@@ -29,64 +28,80 @@ module.exports = {
         rules: [
             {
                 test: /\.ts$/,
-                use: [{
-                    loader: 'ts-loader',
-                }],
+                use: [
+                    {
+                        loader: 'ts-loader',
+                    },
+                ],
             },
             {
                 test: /\.scss$/,
-                use: [{
-                    loader: 'style-loader',
-                }, {
-                    loader: path.resolve(__dirname, './dist'),
-                    options: {
-                        exportType: true,
+                use: [
+                    {
+                        loader: 'style-loader',
                     },
-                }, {
-                    loader: 'css-loader',
-                    options: {
-                        modules: {
-                            exportLocalsConvention: 'camelCaseOnly',
-                            localIdentName: '[name]__[local]__[hash:base64]',
+                    {
+                        loader: path.resolve(__dirname, './dist'),
+                        options: {
+                            exportType: true,
                         },
                     },
-                }, {
-                    loader: 'sass-loader',
-                }],
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: {
+                                exportLocalsConvention: 'camelCaseOnly',
+                                localIdentName: '[name]__[local]__[hash:base64]',
+                            },
+                        },
+                    },
+                    {
+                        loader: 'sass-loader',
+                    },
+                ],
             },
             {
                 test: /\.less$/,
-                use: [{
-                    loader: 'style-loader',
-                }, {
-                    loader: path.resolve(__dirname, './dist'),
-                }, {
-                    loader: 'css-loader',
-                    options: {
-                        modules: {
-                            exportLocalsConvention: 'camelCaseOnly',
-                            localIdentName: '[name]__[local]__[hash:base64]',
+                use: [
+                    {
+                        loader: 'style-loader',
+                    },
+                    {
+                        loader: path.resolve(__dirname, './dist'),
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: {
+                                exportLocalsConvention: 'camelCaseOnly',
+                                localIdentName: '[name]__[local]__[hash:base64]',
+                            },
                         },
                     },
-                }, {
-                    loader: 'less-loader',
-                }],
+                    {
+                        loader: 'less-loader',
+                    },
+                ],
             },
             {
                 test: /\.css$/,
-                use: [{
-                    loader: 'style-loader',
-                }, {
-                    loader: path.resolve(__dirname, './dist'),
-                }, {
-                    loader: 'css-loader',
-                    options: {
-                        modules: {
-                            exportLocalsConvention: 'camelCaseOnly',
-                            localIdentName: '[name]__[local]__[hash:base64]',
+                use: [
+                    {
+                        loader: 'style-loader',
+                    },
+                    {
+                        loader: path.resolve(__dirname, './dist'),
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: {
+                                exportLocalsConvention: 'camelCaseOnly',
+                                localIdentName: '[name]__[local]__[hash:base64]',
+                            },
                         },
                     },
-                }],
+                ],
             },
         ],
     },
