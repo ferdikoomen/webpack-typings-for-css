@@ -12,17 +12,17 @@ jobs:
             - v1-dependencies-
       - run:
           name: install
-          command: yarn install
+          command: npm install
       - save_cache:
           key: v1-dependencies-{{ checksum "package.json" }}
           paths:
             - node_modules
       - run:
           name: build
-          command: yarn run build
+          command: npm run build
       - run:
           name: test
-          command: yarn run test:coverage
+          command: npm run test:coverage
       - run:
           name: codecov
-          command: yarn run codecov
+          command: npm run codecov

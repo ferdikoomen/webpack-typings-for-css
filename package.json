@@ -46,7 +46,7 @@
         "eslint": "eslint .",
         "eslint:fix": "eslint . --fix",
         "codecov": "codecov --token=a1a1f1e5-572a-40fc-bf19-16eca1fe8016",
-        "prepublish": "yarn run clean && yarn run build"
+        "prepublish": "npm run clean && npm run build"
     },
     "dependencies": {
         "camelcase": "^6.3.0",
