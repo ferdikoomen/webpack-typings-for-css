@@ -1,6 +1,7 @@
 'use strict';
 
 const path = require('path');
+const sass = require('sass');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -57,6 +58,9 @@ module.exports = {
                     },
                     {
                         loader: 'sass-loader',
+                        options: {
+                            implementation: sass,
+                        },
                     },
                 ],
             },
