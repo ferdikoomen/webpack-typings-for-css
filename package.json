@@ -58,7 +58,7 @@
         "@rollup/plugin-node-resolve": "15.0.1",
         "@types/node": "18.11.15",
         "codecov": "3.8.3",
-        "css-loader": "6.7.2",
+        "css-loader": "6.7.3",
         "eslint": "8.29.0",
         "eslint-config-prettier": "8.5.0",
         "eslint-plugin-prettier": "4.2.1",
