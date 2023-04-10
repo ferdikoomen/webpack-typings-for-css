@@ -2,8 +2,6 @@
 
 [![NPM][npm-image]][npm-url]
 [![License][license-image]][license-url]
-[![Quality][quality-image]][quality-url]
-[![Code Climate][climate-image]][climate-url]
 [![Downloads][downloads-image]][downloads-url]
 [![Build][build-image]][build-url]
 
@@ -160,10 +158,6 @@ declare module '*.scss' {
 [npm-image]: https://img.shields.io/npm/v/webpack-typings-for-css.svg
 [license-url]: LICENSE
 [license-image]: http://img.shields.io/npm/l/webpack-typings-for-css.svg
-[quality-url]: https://lgtm.com/projects/g/ferdikoomen/webpack-typings-for-css
-[quality-image]: https://img.shields.io/lgtm/grade/javascript/g/ferdikoomen/webpack-typings-for-css.svg
-[climate-url]: https://codeclimate.com/github/ferdikoomen/webpack-typings-for-css
-[climate-image]: https://img.shields.io/codeclimate/maintainability/ferdikoomen/webpack-typings-for-css.svg
 [downloads-url]: http://npm-stat.com/charts.html?package=webpack-typings-for-css
 [downloads-image]: http://img.shields.io/npm/dm/webpack-typings-for-css.svg
 [build-url]: https://circleci.com/gh/ferdikoomen/webpack-typings-for-css/tree/master
