@@ -37,7 +37,8 @@ function loader(source) {
     // this should be parsable as JSON, from there we can process it.
     if (match && match.length) {
         const options = this.getOptions();
-        const localsString = String(match[1]);
+        const localsString = String(match[1]).replace(/`/g, '"');
+
         const locals = JSON.parse(localsString);
         const exportType = options && options.exportType === true;
         const exports = getExports(locals);
