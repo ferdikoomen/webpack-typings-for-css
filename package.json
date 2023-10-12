@@ -74,7 +74,7 @@
         "rollup-plugin-node-externals": "6.1.2",
         "rollup-plugin-terser": "7.0.2",
         "sass-loader": "13.3.2",
-        "sass": "1.69.2",
+        "sass": "1.69.3",
         "style-loader": "3.3.3",
         "ts-loader": "9.5.0",
         "typescript": "5.2.2",
