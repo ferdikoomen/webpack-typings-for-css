@@ -1,6 +1,6 @@
 {
     "name": "webpack-typings-for-css",
-    "version": "0.12.0",
+    "version": "0.13.0",
     "description": "Webpack loader that generates TypeScript typings for CSS modules",
     "author": "Ferdi Koomen",
     "homepage": "https://github.com/ferdikoomen/webpack-typings-for-css",
@@ -50,13 +50,13 @@
     },
     "dependencies": {
         "camelcase": "^6.3.0",
-        "handlebars": "^4.7.7",
+        "handlebars": "^4.7.8",
         "path": "^0.12.7"
     },
     "devDependencies": {
         "@rollup/plugin-commonjs": "25.0.7",
         "@rollup/plugin-node-resolve": "15.2.3",
-        "@types/node": "20.10.6",
+        "@types/node": "20.10.7",
         "codecov": "3.8.3",
         "css-loader": "6.8.1",
         "eslint": "8.56.0",
